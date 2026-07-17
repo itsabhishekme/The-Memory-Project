@@ -45,14 +45,16 @@ export default function LetterCard({ letter }: LetterCardProps) {
             <span className="font-semibold">To:</span> {letter.receiver}
           </p>
 
-          <div className="flex items-center gap-2">
-            <Calendar className="h-4 w-4" />
-            <span>{letter.year}</span>
-          </div>
+          {"year" in letter && (
+            <div className="flex items-center gap-2">
+              <Calendar className="h-4 w-4" />
+              <span>{(letter as { year?: string | number }).year}</span>
+            </div>
+          )}
         </div>
 
         <p className="line-clamp-4 leading-7 text-slate-600 dark:text-slate-300">
-          {letter.excerpt}
+          {(letter as any).content}
         </p>
 
         <Link
