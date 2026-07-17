@@ -1,0 +1,486 @@
+/* ==========================================================================
+   The Memory Project
+   File: styles/memory-project.css
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Theme Variables
+-------------------------------------------------------------------------- */
+
+:root {
+  --primary: #f59e0b;
+  --primary-dark: #d97706;
+  --secondary: #1e293b;
+  --accent: #f97316;
+
+  --background: #ffffff;
+  --surface: #f8fafc;
+  --card: #ffffff;
+
+  --text: #0f172a;
+  --text-light: #475569;
+  --border: #e2e8f0;
+
+  --success: #22c55e;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.12);
+  --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.18);
+
+  --radius-sm: 8px;
+  --radius: 16px;
+  --radius-lg: 24px;
+
+  --transition: 0.3s ease;
+}
+
+/* --------------------------------------------------------------------------
+   Dark Mode
+-------------------------------------------------------------------------- */
+
+.dark {
+  --background: #020617;
+  --surface: #0f172a;
+  --card: #111827;
+
+  --text: #f8fafc;
+  --text-light: #cbd5e1;
+
+  --border: #334155;
+}
+
+/* --------------------------------------------------------------------------
+   Base
+-------------------------------------------------------------------------- */
+
+.memory-project {
+  background: var(--background);
+  color: var(--text);
+}
+
+.memory-container {
+  width: min(1200px, 92%);
+  margin-inline: auto;
+}
+
+.memory-section {
+  padding: 6rem 0;
+}
+
+.memory-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.memory-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.memory-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.memory-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* --------------------------------------------------------------------------
+   Headings
+-------------------------------------------------------------------------- */
+
+.memory-title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text);
+}
+
+.memory-subtitle {
+  margin-top: 1rem;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: var(--text-light);
+}
+
+.memory-center {
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   Cards
+-------------------------------------------------------------------------- */
+
+.memory-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.memory-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.memory-card img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.memory-card-title {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.memory-card-text {
+  margin-top: .75rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* --------------------------------------------------------------------------
+   Hero
+-------------------------------------------------------------------------- */
+
+.memory-hero {
+  position: relative;
+  padding: 8rem 0;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fef3c7,
+      #fff7ed,
+      #ffffff
+    );
+}
+
+.dark .memory-hero {
+  background:
+    linear-gradient(
+      135deg,
+      #111827,
+      #0f172a,
+      #020617
+    );
+}
+
+.memory-hero-content {
+  max-width: 700px;
+}
+
+.memory-hero-title {
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.memory-hero-description {
+  margin-top: 2rem;
+  color: var(--text-light);
+  line-height: 1.9;
+  font-size: 1.1rem;
+}
+
+/* --------------------------------------------------------------------------
+   Buttons
+-------------------------------------------------------------------------- */
+
+.memory-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+
+  padding: .95rem 1.75rem;
+
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: var(--transition);
+}
+
+.memory-btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.memory-btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+}
+
+.memory-btn-outline {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.memory-btn-outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* --------------------------------------------------------------------------
+   Images
+-------------------------------------------------------------------------- */
+
+.memory-image {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+.memory-rounded {
+  border-radius: 999px;
+}
+
+/* --------------------------------------------------------------------------
+   Timeline
+-------------------------------------------------------------------------- */
+
+.memory-timeline {
+  position: relative;
+  margin-top: 4rem;
+}
+
+.memory-timeline::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--primary);
+}
+
+.memory-timeline-item {
+  position: relative;
+  padding-left: 4rem;
+  margin-bottom: 3rem;
+}
+
+.memory-timeline-dot {
+  position: absolute;
+  left: 9px;
+  top: 10px;
+
+  width: 24px;
+  height: 24px;
+
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+/* --------------------------------------------------------------------------
+   Testimonials
+-------------------------------------------------------------------------- */
+
+.memory-testimonial {
+  padding: 2rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+
+.memory-testimonial p {
+  line-height: 1.9;
+  color: var(--text-light);
+}
+
+.memory-author {
+  margin-top: 1.5rem;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   Partner Logos
+-------------------------------------------------------------------------- */
+
+.partner-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.partner-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 120px;
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+
+  transition: var(--transition);
+}
+
+.partner-logo:hover {
+  transform: scale(1.05);
+}
+
+/* --------------------------------------------------------------------------
+   Gallery
+-------------------------------------------------------------------------- */
+
+.memory-gallery {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.memory-gallery img {
+  width: 100%;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.memory-gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* --------------------------------------------------------------------------
+   Form
+-------------------------------------------------------------------------- */
+
+.memory-form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.memory-input,
+.memory-textarea,
+.memory-select {
+  width: 100%;
+  padding: 1rem;
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  background: var(--card);
+  color: var(--text);
+
+  transition: var(--transition);
+}
+
+.memory-input:focus,
+.memory-textarea:focus,
+.memory-select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.memory-textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+-------------------------------------------------------------------------- */
+
+.memory-footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 4rem 0;
+}
+
+.memory-footer p {
+  color: var(--text-light);
+}
+
+/* --------------------------------------------------------------------------
+   Animations
+-------------------------------------------------------------------------- */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp .8s ease both;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+-------------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+
+  .memory-grid-4,
+  .memory-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .memory-grid-2,
+  .memory-grid-3,
+  .memory-grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .memory-section {
+    padding: 4rem 0;
+  }
+
+  .memory-hero {
+    padding: 6rem 0;
+  }
+
+  .memory-title {
+    font-size: 2.2rem;
+  }
+
+  .memory-hero-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .memory-container {
+    width: 94%;
+  }
+
+  .memory-card {
+    padding: 1.5rem;
+  }
+
+  .memory-btn {
+    width: 100%;
+  }
+}
