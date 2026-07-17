@@ -19,62 +19,84 @@ export const metadata: Metadata = {
 const letters = [
   {
     id: 1,
-    title: "A Letter to My Future Grandchildren",
-    author: "Ramesh Kumar",
-    year: "1984",
-    category: "Family Legacy",
+    title: "More Than Recipes. A Living Legacy.",
+    author: "The Living Legacy",
+    year: "2026",
+    category: "Our Mission",
     excerpt:
-      "I hope one day you will read these words and remember that kindness is the greatest wealth a person can leave behind.",
+      "Every recipe carries generations of memories. Every documentary preserves voices that deserve to be heard. Every act of kindness creates hope.",
   },
   {
     id: 2,
-    title: "Mother's Last Recipe Letter",
-    author: "Savitri Devi",
-    year: "1998",
-    category: "Traditions",
+    title: "Celebrating India's Culinary Heritage",
+    author: "The Living Legacy",
+    year: "2026",
+    category: "Culinary Heritage",
     excerpt:
-      "Recipes are more than food—they carry memories, love, and generations of wisdom inside every meal.",
+      "Traditional recipes are more than ingredients—they are stories of families, festivals, cultures, and love passed from one generation to the next.",
   },
   {
     id: 3,
-    title: "Letters From the Village",
-    author: "Mohan Singh",
-    year: "1975",
-    category: "History",
+    title: "Authentic Storytelling That Preserves Voices",
+    author: "The Living Legacy",
+    year: "2026",
+    category: "Documentary",
     excerpt:
-      "Life was simple, but every festival, every harvest, and every smile carried a story worth remembering.",
+      "Every documentary captures real people, forgotten histories, and untold journeys so their voices continue to inspire future generations.",
   },
   {
     id: 4,
-    title: "A Soldier's Promise",
-    author: "Unknown",
-    year: "1965",
-    category: "Courage",
+    title: "Every Act of Kindness Creates Hope",
+    author: "The Living Legacy",
+    year: "2026",
+    category: "Social Impact",
     excerpt:
-      "If I return, we shall celebrate together. If I do not, remember me through hope—not sorrow.",
+      "Compassion transforms lives. Through community service, shared meals, and meaningful action, kindness becomes a legacy that lives on.",
+  },
+  {
+    id: 5,
+    title: "Connecting Tradition, Humanity & the Future",
+    author: "The Living Legacy",
+    year: "2026",
+    category: "Living Legacy",
+    excerpt:
+      "The Living Legacy connects India's timeless traditions with modern generations through culture, storytelling, preservation, and community-driven experiences.",
+  },
+  {
+    id: 6,
+    title: "Preserving What Matters Most",
+    author: "The Living Legacy",
+    year: "2026",
+    category: "Legacy",
+    excerpt:
+      "From cherished family recipes and oral histories to documentaries and humanitarian initiatives, every memory we preserve strengthens the bridge between the past, present, and future.",
   },
 ];
 
 const categories = [
   {
-    title: "Family Letters",
-    icon: Users,
-    description: "Letters passed through generations.",
-  },
-  {
-    title: "Love Letters",
-    icon: Heart,
-    description: "Stories of affection and lifelong memories.",
-  },
-  {
-    title: "Historical Letters",
+    title: "Culinary Heritage",
     icon: BookOpen,
-    description: "Documents preserving important moments.",
+    description:
+      "Preserving authentic recipes, regional cuisines, and the traditions that bring generations together.",
   },
   {
-    title: "Personal Journals",
+    title: "Documentary Stories",
+    icon: Users,
+    description:
+      "Capturing real voices, untold journeys, and inspiring human stories through meaningful documentaries.",
+  },
+  {
+    title: "Social Impact",
+    icon: Heart,
+    description:
+      "Celebrating compassion, community service, and initiatives that create hope and lasting positive change.",
+  },
+  {
+    title: "Living Legacy",
     icon: PenTool,
-    description: "Everyday reflections and life experiences.",
+    description:
+      "Connecting India's culture, heritage, storytelling, and humanity to inspire present and future generations.",
   },
 ];
 
